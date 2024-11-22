@@ -12,7 +12,7 @@ export function useLogin() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  function handleChange (e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -20,7 +20,7 @@ export function useLogin() {
     }));
   };
 
-  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+  async function handleLogin (e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsLoading(true)
     try {

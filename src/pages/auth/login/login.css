@@ -64,7 +64,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
 /*customButton*/
 .customButton {
-  @apply w-[311px] sm:w-[404px] py-3 rounded-lg bg-[#E5AA5C] hover:bg-[#e4952d] text-white text-base font-bold disabled:bg-[#BFBFBF] disabled:cursor-not-allowed;
+  @apply w-[311px] sm:w-[404px] py-3 rounded-lg bg-golden-sand hover:bg-[#e4952d] text-white text-base font-bold disabled:bg-[#BFBFBF] disabled:cursor-not-allowed;
 }
 
 /* rightImage */
