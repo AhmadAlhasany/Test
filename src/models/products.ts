@@ -44,9 +44,24 @@ export interface productType {
     qrCode: string
   }
   
+  export interface productsProps{
+    products:productType[]
+    isLoading:boolean
+  }
+
   export interface prodcutCardProps{
     id: number
     title: string
     price: number
     thumbnail: string
+  }
+
+  export interface productDeatilsProps{
+    products:productType[]
+  }
+
+  export interface priceTagProps{
+    price: number
+    discountPercentage: number
+    stock: number
   }
