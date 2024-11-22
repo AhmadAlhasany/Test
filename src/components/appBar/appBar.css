@@ -1,0 +1,12 @@
+nav {
+  @apply text-xl bg-[#F2F2F2] py-2.5 fixed flex justify-center sm:justify-between w-full px-4 sm:px-8 xl:px-16;
+}
+
+.navButtons .link {
+  @apply py-2 px-4 border-b-2 border-transparent  hover:text-golden-sand hover:border-golden-sand transition-all duration-[400ms];
+}
+
+.navButtons button,
+.navButtons .button {
+  @apply py-2 inline-block ml-4 px-4 border-2 rounded-lg text-golden-sand border-golden-sand hover:text-white hover:bg-golden-sand transition-all duration-[400ms];
+}
