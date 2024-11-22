@@ -1,0 +1,38 @@
+.products {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 max-w-[1400px] px-4 sm:px-10  mx-auto pt-28;
+}
+
+/*ProductsCard*/
+.productCard {
+  @apply w-full bg-white p-4 rounded-[5px] flex flex-col h-full;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px,
+    rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
+}
+
+.productCard > img {
+  @apply w-full bg-[#F0F0F0] rounded-[10px] aspect-square object-cover;
+}
+
+.productInfoWra {
+  @apply flex justify-between items-center h-full gap-4;
+}
+
+.productInfoWra a {
+  @apply mr-2 min-h-16 min-w-16;
+}
+
+.productInfoWra img {
+  @apply p-4 bg-golden-sand bg-opacity-10 hover:bg-opacity-20 cursor-pointer rounded-full;
+}
+
+.productInfo {
+  @apply py-4 flex flex-col justify-between h-full;
+}
+
+.productInfo h6 {
+  @apply text-xl font-medium;
+}
+
+.productInfo p {
+  @apply text-golden-sand font-semibold;
+}

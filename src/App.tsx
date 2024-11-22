@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<Products />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<h4>This Route doesn't exist</h4>} />
+          <Route path="*" element={<p>Page not found</p>} />
         </Routes>
       </div>
     </Router>
