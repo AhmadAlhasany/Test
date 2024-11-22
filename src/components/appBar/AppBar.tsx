@@ -17,7 +17,7 @@ function AppBar({userAuthenticated}:{userAuthenticated:boolean}) {
                     }}>LogOut</button>    
                 </>
             :
-                <Link className="button" to='./login' >Login</Link>
+                <Link className="button" to='./login' >LogIn</Link>
             }
         </div>
     </nav>
