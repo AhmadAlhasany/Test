@@ -1,0 +1,73 @@
+.loginWra {
+  @apply min-h-[100vh] flex justify-center items-center lg:bg-[#F8F8F8];
+}
+
+.login {
+  @apply w-full max-w-[1200px] overflow-hidden rounded-2xl lg:mx-10 xl:mx-20 flex justify-center items-stretch lg:shadow-[0px_0px_10px_0px_rgba(231,226,217,0.75)];
+}
+
+/* loginCard */
+
+.loginCard {
+  @apply w-1/2 px-4 relative flex flex-col items-center lg:bg-white py-16;
+}
+
+.header3 {
+  @apply text-2xl sm:text-[32px] text-center mb-10 sm:w-[390px] self-center min-w-[290px];
+}
+
+form {
+  @apply flex flex-col justify-between h-[300px];
+}
+
+.textInputsWra {
+  @apply flex flex-col gap-2;
+}
+
+/* rememberMe */
+.rememberMe {
+  @apply w-[311px] sm:w-[404px] py-4 flex items-center;
+}
+.rememberMe > label {
+  @apply mx-2;
+}
+input[type="checkbox"] {
+  @apply w-4 h-4;
+}
+
+/*inputs */
+.input {
+  @apply w-[311px] sm:w-[404px] relative rounded-lg self-end;
+}
+
+.input input {
+  @apply w-full p-[11px] pl-10 pr-10 bg-[#F5F5F5] rounded-lg text-base;
+}
+
+.username {
+  @apply mb-5;
+}
+
+.input .icon {
+  @apply absolute mx-3 top-1/2 left-0 -translate-y-1/2 w-[18px] h-[18px];
+}
+
+.eye {
+  @apply absolute px-3 top-1/2 right-0 -translate-y-1/2;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  @apply hidden;
+}
+
+/*customButton*/
+.customButton {
+  @apply w-[311px] sm:w-[404px] py-3 rounded-lg bg-[#E5AA5C] hover:bg-[#e4952d] text-white text-base font-bold disabled:bg-[#BFBFBF] disabled:cursor-not-allowed;
+}
+
+/* rightImage */
+.rightImage {
+  @apply min-h-full w-1/2 bg-[#FFE6BF] hidden lg:flex justify-center items-center;
+}
