@@ -1,3 +1,4 @@
+/* response type */
 export interface productType {
     id: number
     title: string
@@ -43,7 +44,7 @@ export interface productType {
     barcode: string
     qrCode: string
   }
-  
+  /*end of response type*/
   export interface productsProps{
     products:productType[]
     isLoading:boolean

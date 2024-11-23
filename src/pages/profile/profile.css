@@ -1,0 +1,43 @@
+.profile {
+  @apply min-h-screen flex justify-center items-center pt-24;
+}
+
+.profileCard {
+  @apply w-[450px] shadow-lg rounded-lg;
+}
+
+/* picture and username */
+.picAndNameWra {
+  @apply text-center px-6 py-8 bg-gray-800 text-white rounded-sm;
+}
+
+.picAndNameWra > h2 {
+  @apply text-2xl font-semibold;
+}
+
+.picAndNameWra > img {
+  @apply w-24 h-24 rounded-full mb-4 bg-gray-300 mx-auto object-cover;
+}
+
+/* user info */
+
+.userInfo {
+  @apply p-6;
+}
+
+.userInfo > div {
+  @apply mb-4;
+}
+
+.userInfo .title {
+  @apply text-gray-700 font-bold;
+}
+
+.userInfo .value {
+  @apply text-gray-600;
+}
+
+/* Profile logout button */
+.profileLogoutButton {
+  @apply mt-2 w-full border-2 border-golden-sand bg-golden-sand hover:bg-transparent text-white hover:text-golden-sand py-2 rounded-sm transition-colors;
+}

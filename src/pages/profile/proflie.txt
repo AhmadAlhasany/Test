@@ -1,0 +1,41 @@
+    <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden pt-24">
+      <div className="text-center p-6 bg-gray-800 text-white">
+        <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gray-300">
+          {user.image ? (
+            <img 
+              src={user.image} 
+              alt={user.name} 
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-3xl font-bold text-gray-600">
+              {user.name ? user.name.charAt(0).toUpperCase() : '?'}
+            </div>
+          )}
+        </div>
+        <h2 className="text-2xl font-semibold">{user.name}</h2>
+      </div>
+      <div className="p-6">
+        <div className="mb-4">
+          <p className="text-gray-700 font-bold">Email</p>
+          <p className="text-gray-600">{user.email}</p>
+        </div>
+        <div className="mb-4">
+          <p className="text-gray-700 font-bold">Age</p>
+          <p className="text-gray-600">{user.age} years old</p>
+        </div>
+        <div className="mb-6">
+          <p className="text-gray-700 font-bold">Phone</p>
+          <p className="text-gray-600">{user.phone}</p>
+        </div>
+        <button
+          onClick={()=>{
+            localStorage.removeItem('authToken');
+            window.location.reload()
+          }}
+          className="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-200"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
