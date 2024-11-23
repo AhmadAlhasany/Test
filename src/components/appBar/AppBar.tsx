@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Logo from "../logo/Logo"
 import './appBar.css'
 
 function AppBar({userAuthenticated}:{userAuthenticated:boolean}) {
+    const navigate = useNavigate()
   return (
     <nav>
         <Logo/>
@@ -13,7 +14,7 @@ function AppBar({userAuthenticated}:{userAuthenticated:boolean}) {
                     <Link className="link" to='./profile'>Profile</Link>
                     <button onClick={()=>{
                         localStorage.removeItem('authToken');
-                        window.location.reload()
+                        navigate('/login', {replace: true})
                     }}>LogOut</button>    
                 </>
             :

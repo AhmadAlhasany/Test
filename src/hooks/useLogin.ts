@@ -27,6 +27,7 @@ export function useLogin() {
       const res = await postData('/auth/login', {    
         username: formData.username,
         password: formData.password,
+        expiresInMins: 1440,
       });
       toast.success("Login successful!", { duration: 3000 });
       localStorage.setItem('authToken', res.accessToken)
