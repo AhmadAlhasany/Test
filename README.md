@@ -1,46 +1,192 @@
-# Getting Started with Create React App
+# E-commerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple and clean e-commerce application built using React and various other libraries. It allows users to view a list of products, view product details, login and see their profile.
 
-## Available Scripts
+The app interacts with the [DummyJSON API](https://dummyjson.com) for fetching product data, user data, and handling authentication.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+4. [API Endpoints](#api-endpoints)
+5. [How to Use](#how-to-use)
+6. [Error Handling](#error-handling)
+7. [Bonus Features](#bonus-features)
+8. [Deployment](#deployment)
+9. [Contributing](#contributing)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **User Authentication:**
 
-### `npm run build`
+  - Login page with username and password.
+  - Displays a toaster message when the user is logged in.
+  - Logout functionality to clear session and return to the login screen.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Product List View:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Displays a list of products fetched from the DummyJSON API.
+  - Each product shows the name, price, and a thumbnail image.
+  - Clicking on a product navigates to the Product Detail View.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Product Detail View:**
 
-### `npm run eject`
+  - Displays product details including:
+    - ID
+    - Name
+    - Description
+    - Price
+    - Discount Percentage (if available)
+    - Stock
+  - "Add to Cart" button (does not implement cart functionality, just for UI)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **User Profile View:**
+  - Accessible after login via navbar.
+  - Displays the logged-in user's name, email, age, phone number, and image.
+  - Includes a logout button to clear the session.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **React**: Frontend library for building UI components.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Axios**: HTTP client for making API requests.
+- **React Router DOM**: For handling routing and navigation.
+- **TypeScript**: A statically typed superset of JavaScript.
+- **React Hot Toast**: For displaying notifications.
+- **gh-pages**: For deploying the app to GitHub Pages.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To get started with this project locally, follow the steps below:
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (I'm using version 18.x)
+- [npm](https://npmjs.com/) (comes with Node.js)
+
+### Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/ecommerce-app.git
+   cd ecommerce-app
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   This will start the app on `http://localhost:3000`.
+
+---
+
+## API Endpoints
+
+This app interacts with the following API endpoints:
+
+### Products
+
+- **List products**:  
+  `GET https://dummyjson.com/products`
+- **Product details**:  
+  `GET https://dummyjson.com/products/{id}`
+
+### Authentication
+
+- **Login**:  
+  `POST https://dummyjson.com/auth/login`
+- **Logout**:  
+  Logout by clearing local session (no specific API endpoint for logout).
+
+### Users
+
+- **User details**:  
+  `GET https://dummyjson.com/auth/me`
+
+---
+
+## How to Use
+
+1. **Login**:  
+   Enter your username and password on the login screen to authenticate. Upon successful login, you'll see a toaster message indicating that you are logged in.
+
+2. **View Products**:  
+   Navigate to the product listing page. Click on a product cart button to view its details.
+
+3. **View Profile**:  
+   Once logged in, navigate to the user profile view to see your information. You can also log out from this page.
+
+4. **Logout**:  
+   Clicking the "Logout" button will clear your session and return you to the login screen.
+
+---
+
+## Error Handling
+
+- **API Errors**:  
+  Errors from the API are handled gracefully with appropriate error messages shown to the user.
+
+- **Loading States**:  
+  While fetching product or user data, a loading text is displayed until the data is fully loaded.
+
+- **Login Errors**:  
+  If authentication fails (e.g., wrong credentials), an error message will appear notifying the user to check their login details.
+
+---
+
+## Bonus Features
+
+- **Error Handling Enhancements**:  
+  Improved error messages are displayed for failed API calls, and the user is informed when there are network issues.
+
+- **Loading Indicators**:  
+  A loading mesage appears when fetching product or user data to indicate the app is processing.
+
+---
+
+## Deployment
+
+To deploy the app to GitHub Pages, run the following commands:
+
+1. Add the homepage property in `package.json`:
+
+   ```json
+   "homepage": "https://yourusername.github.io/ecommerce-app"
+   ```
+
+2. Build the app for production:
+
+   ```bash
+   npm run build
+   ```
+
+3. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+
+---
+
+## Contributing
+
+Feel free to fork this repository, open issues, or submit pull requests for any enhancements or fixes. Contributions are welcome!
+
+---
+
+By following the above instructions, you should be able to run, test, and deploy the e-commerce app with ease.
